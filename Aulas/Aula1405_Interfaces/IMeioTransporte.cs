@@ -8,5 +8,10 @@ namespace Aula1405_Interfaces
 {
     interface IMeioTransporte
     {
+        // CONTRATO
+        void Acelerar();
+        void Desacelerar();
+
+
     }
 }
