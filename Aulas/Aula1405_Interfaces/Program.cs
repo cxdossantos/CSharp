@@ -11,6 +11,7 @@ namespace Aula1405_Interfaces
         static void Main(string[] args)
         {
             Carro c = new Carro();
+            Onibus o = new Onibus();
 
             c.Acelerar();
             c.Acelerar();
@@ -18,13 +19,35 @@ namespace Aula1405_Interfaces
             c.Acelerar();
             c.Acelerar();
 
-            Console.WriteLine("Velocidade: " + c.Velocidade);
+            o.Acelerar();
+            o.Acelerar();
+            o.Acelerar();
+            o.Acelerar();
+
+            Console.WriteLine("Velocidade do Carro: " + c.Velocidade);
+            Console.WriteLine("Velocidade do Onibus: " + o.Velocidade);
 
             c.Desacelerar();
             c.Desacelerar();
-            Console.WriteLine("Velocidade: " + c.Velocidade);
+            o.Desacelerar();
+            o.Desacelerar();
+            Console.WriteLine("Velocidade do Carro: " + c.Velocidade);
+            Console.WriteLine("Velocidade do Onibus: " + o.Velocidade);
+
+            AcelerarBastante(c);
+            AcelerarBastante(o);
+            Console.WriteLine("Velocidade do Carro: " + c.Velocidade);
+            Console.WriteLine("Velocidade do Onibus: " + o.Velocidade);
 
             Console.ReadKey();
+        }
+
+        static void AcelerarBastante(IMeioTransporte meioTransporte)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                meioTransporte.Acelerar();
+            }
         }
     }
 }
