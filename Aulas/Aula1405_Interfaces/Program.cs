@@ -10,6 +10,21 @@ namespace Aula1405_Interfaces
     {
         static void Main(string[] args)
         {
+            Carro c = new Carro();
+
+            c.Acelerar();
+            c.Acelerar();
+            c.Acelerar();
+            c.Acelerar();
+            c.Acelerar();
+
+            Console.WriteLine("Velocidade: " + c.Velocidade);
+
+            c.Desacelerar();
+            c.Desacelerar();
+            Console.WriteLine("Velocidade: " + c.Velocidade);
+
+            Console.ReadKey();
         }
     }
 }
