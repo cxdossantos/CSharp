@@ -6,9 +6,10 @@ namespace Controllers.Base
     interface IBaseController<T> where T : class
     {
         void Adicionar(T entity);
+
         IList<T> ListarTodos();
 
-        IList<T> ListarPorNome();
+        IList<T> ListarPorNome(string Nome);
 
         T BuscarPorID(int id);
 
